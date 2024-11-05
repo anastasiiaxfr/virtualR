@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color-scheme: dark;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-7xl tracking-wide 
+  }
+
+  h1 span {
+    @apply bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text
+  }
+
+  h2 {
+   @apply text-3xl sm:text-5xl lg:text-6xl tracking-wide mt-5 lg:mt-10
+  }
+
+  h2 span {
+    @apply bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text
+  }
+
+  h3 {
+    @apply font-semibold mb-4
+  }
+
+}
+
+@layer components {
+  .section {
+    @apply  my-20
+  }
+
+  .container {
+    @apply mx-auto px-6
+  }
+
+  .navbar {
+    @apply sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80
+  }
+
+  .navbar-container {
+    @apply relative flex items-center justify-between space-x-12 px-4 mx-auto text-sm
+  }
+
+  .navbar-menu {
+    @apply hidden lg:flex space-x-8 
+  }
+
+  .navbar-menu a {
+    @apply hover:text-orange-500 duration-200 transition
+  }
+
+  .navbar-btns {
+    @apply hidden lg:flex items-center space-x-6
+  }
+
+  .navbar-toggler {
+    @apply lg:hidden md:flex flex-col justify-end
+  }
+
+  .drawer {
+    @apply fixed right-0 top-[0] -z-10 bg-neutral-900 w-full h-screen p-12 pt-[85px] flex flex-col justify-start items-center lg:hidden
+  }
+  .drawer ul {
+    @apply w-full
+  }
+  .drawer li {
+    @apply py-4
+  }
+
+  .drawer li:first-child {
+    @apply pt-0
+  }
+
+  .drawer-btns {
+    @apply flex flex-col items-start space-y-6 w-full
+  }
+
+  .divider {
+    @apply w-full border-b border-neutral-700/80
+  }
+
+  .logo {
+    @apply flex items-center flex-shrink-0 text-xl tracking-tight
+  }
+
+  .logo img {
+    @apply h-10 w-10 mr-2
+  }
+
+  .btn-bd {
+    @apply py-2 px-3 border rounded-md cursor-pointer hover:border-orange-500 hover:text-orange-500 duration-200 transition text-center capitalize
+  }
+
+  .btn {
+    @apply py-2 px-3 rounded-md border border-transparent bg-gradient-to-r from-orange-500 to-orange-800 transition duration-500 cursor-pointer hover:bg-gradient-to-l from-orange-500 to-orange-800 text-white text-center capitalize
+  }
+
+  .btns {
+    @apply flex flex-col sm:flex-row justify-center gap-6
+  }
+  
+  .hero-container {
+    @apply max-w-7xl mx-auto 
+  }
+
+
+
+  .hgroup {
+    @apply flex flex-col items-center
+  }
+
+  .subttile {
+    @apply mt-10 text-lg max-w-4xl opacity-30
+  }
+
+  .suptitle {
+    @apply px-2 py-1 text-sm font-medium uppercase text-orange-500 
+  }
+
+  .video-wrap {
+    @apply flex justify-center mt-10 
+  }
+
+  .video-wrap video {
+    @apply w-1/2 rounded-lg shadow-neutral-900 mx-2 my-4
+  }
+
+  .features {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 
+  }
+
+  .feature {
+    @apply w-full 
+  }
+
+  .feature-icon {
+    @apply flex justify-center items-center  h-10 w-10 p-2 bg-neutral-800 text-orange-700 rounded-full
+  }
+
+  .feature-title {
+    @apply mt-0 mb-6 text-xl
+  }
+
+  .feature-description {
+    @apply opacity-30 
+  }
+
+  .list {
+    @apply flex flex-col gap-10
+  }
+
+  .list-icon {
+    @apply flex justify-center items-center h-10 w-10 p-2 text-green-400 bg-neutral-900 rounded-full
+  }
+
+  .list-title {
+    @apply text-xl mb-2
+  }
+
+  li.list-item {
+    @apply flex gap-2
+  }
+
+  .list-desc {
+    @apply opacity-30
+  }
+
+  .plans {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16
+  }
+
+  .plan {
+    @apply flex flex-col gap-4 p-10 border border-neutral-700 rounded-xl
+  }
+
+  .plan-title {
+    @apply text-4xl mb-8
+  }
+
+  .plan-title span {
+    @apply bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text text-xl
+  }
+
+  .plan-price {
+    @apply text-5xl
+  }
+
+  .plan-price span {
+    @apply opacity-30 text-xl tracking-tight
+  }
+
+ 
+  .plan-list li {
+    @apply flex gap-2 my-4
+  }
+
+  .testimonials {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16
+  }
+  .testimonial {
+    @apply p-6 bg-neutral-900 rounded-md border border-neutral-800  font-thin
+  }
+
+  .testimonial-text {
+    @apply opacity-70
+  }
+
+  .testimonial-info {
+    @apply flex gap-4 items-center mt-10 
+  }
+
+  .testimonial-info img { 
+    @apply w-12 h-12 rounded-full border border-neutral-300
+  }
+
+  .testimonial-data {
+    @apply text-sm font-normal italic opacity-30
+  }
+
+  .footer {
+    @apply border-t border-neutral-700 py-10
+  }
+
+  .footer-container {
+    @apply grid grid-cols-2 lg:grid-cols-3 gap-4
+  }
+
+  .footer li a {
+      @apply opacity-30 transition duration-200 hover:text-orange-500 hover:opacity-100 
+  }
+}
